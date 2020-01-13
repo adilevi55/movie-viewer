@@ -1,0 +1,33 @@
+.span-vote{
+    background: #fc3;
+    padding:.2em .6em .3em;
+    border-radius: .25em;
+    font-weight:700;
+    color: #ffffff;  
+  }
+  .span-vote i {
+    position: relative;
+    top: 5px;
+   }
+   .span-runtime{
+     background: green;
+     padding:.2em .6em .3em;
+     border-radius: .25em;
+     font-weight:700;
+     color: #ffffff;  
+   }
+   .span-runtime i {
+     position: relative;
+     top: 5px;
+    }
+   .span-date{
+     background: rgb(165, 164, 164);
+     padding:.2em .6em .3em;
+     border-radius: .25em;
+     font-weight:700;
+     color: #ffffff;  
+   }
+   .span-date i {
+     position: relative;
+     top: 5px;
+    }

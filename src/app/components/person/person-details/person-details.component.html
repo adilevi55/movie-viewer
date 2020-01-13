@@ -1,0 +1,12 @@
+    <div>
+        <h1>{{person.name}}</h1>
+        <img src="https://image.tmdb.org/t/p/w300{{person.profile_path}}"
+        onError="this.src='https://cdn.browshot.com/static/images/not-found.png'">
+
+        <p>{{person.birthday | date:"mediumDate"}}</p>
+
+        <p>biography
+            {{person.biography}}</p>
+    </div>
+
+

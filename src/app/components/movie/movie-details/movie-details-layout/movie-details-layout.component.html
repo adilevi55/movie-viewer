@@ -1,0 +1,39 @@
+
+    <div class="div-background" 
+    [ngStyle]="{'background-image': 'linear-gradient(rgba(52,41,49,0.80),
+     rgba(0,0,0,0.85)),
+    url('+'https://image.tmdb.org/t/p/w1280' + movieDetails.backdrop_path +')'}" 
+    fxLayoutAlign="center center"
+    >
+   
+    <div class="div-layout-movie-details" fxFlex="75%" fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutAlign="center center">
+       
+       <div class="div-centerd-movie-details" fxFlex="60%" >
+           <h1 class="title">{{movieDetails.title}}</h1>
+           <p>Overview</p>
+           <p>{{movieDetails.overview}}</p>
+
+         <mv-movie-trailer-btn 
+          [movieId]="movieDetails.id" 
+          [title]="movieDetails.title"
+          ></mv-movie-trailer-btn>
+
+           <p>Categories</p>
+           <mv-movie-categories 
+           [category]="movieDetails.genres">
+          </mv-movie-categories>
+           
+           <div fxLayoutGap="0.7%">
+            <mv-movie-time-date-vote 
+            [movieDetails]="movieDetails">
+          </mv-movie-time-date-vote>
+           </div>
+           
+       </div>
+
+<mv-movie-details-img fxFlex="40%" fxFlexAlign="start" 
+[poster]="movieDetails.poster_path">
+</mv-movie-details-img>
+   
+</div>
+</div>

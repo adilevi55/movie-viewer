@@ -1,0 +1,14 @@
+p{
+    text-align: center;
+}
+h1{
+    text-shadow:
+    0 1px 0px #b43737,1px 0 0px #cd5d5d,
+    1px 2px 1px #b43737,2px 1px 1px #cd5d5d,
+    2px 3px 2px #b43737,3px 2px 2px #cd5d5d,
+     3px 4px 2px #b43737, 4px 3px 3px #cd5d5d,
+      4px 5px 3px #b43737, 5px 4px 2px #cd5d5d,
+       5px 6px 2px #b43737, 6px 5px 2px #cd5d5d,
+        6px 7px 1px #b43737, 7px 6px 1px #cd5d5d,
+         7px 8px 0px #b43737, 8px 7px 0px #cd5d5d;
+}

@@ -1,0 +1,12 @@
+div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  
+}
+mv-movie-list-card{
+    margin: 0.5%;
+}
+h1{
+    font-family: 'Shrikhand', cursive;
+    letter-spacing: 3px;
+}

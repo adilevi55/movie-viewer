@@ -1,0 +1,17 @@
+<mat-tab-group mat-align-tabs="center" color="warn" backgroundColor="warn">
+    
+    <mat-tab class="movie-labels" label="Recommendations Movies">
+        <mv-recommendations-movies 
+        [movieId]="movieDetails.id" 
+        [movieName]="movieDetails.title">
+
+        </mv-recommendations-movies>
+    </mat-tab>
+
+    <mat-tab class="movie-labels" label="Cast">
+        <mv-cast-movie 
+        [movieId]="movieDetails.id" 
+        [movieName]="movieDetails.title"></mv-cast-movie>
+    </mat-tab>
+
+</mat-tab-group>

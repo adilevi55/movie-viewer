@@ -1,0 +1,12 @@
+<a mat-tab-link routerLinkActive #rla="routerLinkActive" 
+[routerLink]="" [matMenuTriggerFor]='menu'>
+{{menuName}}
+</a>
+
+<mat-menu #menu="matMenu" class="Category-menu">
+    <ng-container *ngFor="let link of navLinks">
+        <button routerLink="{{link.path}}" mat-menu-item class="menu-button-item">
+            {{link.label}}
+        </button>
+    </ng-container>
+</mat-menu>

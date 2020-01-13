@@ -1,0 +1,20 @@
+<form #formInfo="ngForm">
+
+  <mat-form-field color="warn">
+    <input matInput class="input-field" required 
+    #searchInfo="ngModel" [(ngModel)]="search" name="search" 
+    type="text"  placeholder="Search Movie">
+
+  <mat-error *ngIf="searchInfo.errors?.required && searchInfo.touched">
+      Missing Search</mat-error>
+      
+  </mat-form-field>
+
+  <div>
+    <button mat-raised-button color="warn" 
+    [disabled]="formInfo.form.invalid" (click)="getMoviesByInput()">
+      Warn
+    </button>
+  </div>
+
+</form>

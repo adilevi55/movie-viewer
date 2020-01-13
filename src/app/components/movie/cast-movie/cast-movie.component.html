@@ -1,0 +1,25 @@
+<div *ngIf="cast.length > 0; else noCastFound"
+     fxLayout="row wrap" fxLayoutAlign="center">
+    
+     <div *ngFor='let c of cast' class="cast-div"
+      fxFlex.lt-sm="40%"
+      fxFlex.lt-md="0 1 calc(33.3% - 32px)"
+      fxFlex.md="0 1 calc(25% - 32px)"
+      fxFlex.lg="0 1 calc(20% - 32px)"
+    >
+
+        <img routerLink="/person/{{c.id}}" class="cast-img" 
+        src="https://image.tmdb.org/t/p/w300{{c.profile_path}}"
+            onError="this.src='https://cdn.browshot.com/static/images/not-found.png'">
+
+        <div class="cast-names">
+            <a routerLink="/person/{{c.id}}">{{c.name}}</a>
+            <p>{{c.character}}</p>
+        </div>
+
+    </div>
+</div>
+
+<ng-template #noCastFound>
+    <h1>The {{movieName}} movie has no cast</h1>
+</ng-template>

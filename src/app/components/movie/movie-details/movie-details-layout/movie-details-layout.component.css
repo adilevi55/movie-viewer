@@ -1,0 +1,17 @@
+.div-background{
+    background-size: cover;
+    background-position: center top;
+ 
+  }
+  .div-layout-movie-details{
+    margin-bottom:20px;
+  }
+
+ .title{
+  font-size: 3.5em;
+  font-weight: 700;
+   text-align: start;
+ }
+ mv-movie-categories{
+     display: flex;
+ }

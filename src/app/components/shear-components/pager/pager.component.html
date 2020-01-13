@@ -1,0 +1,25 @@
+<div fxLayout="row wrap" fxLayoutAlign="center">
+
+    <div fxFlex.xs="100%" fxFlex.sm="100%" fxLayoutAlign="center">
+       
+        <button mat-raised-button [disabled]="pagesArray[0] == 1" (click)="get10PreviousPages()">
+            <<</button> 
+            <button mat-raised-button [disabled]="1 == currentPage || currentPage == pagesArray[0]"
+                (click)="returnPage.loadPreviousPage.loadPreviousPageForListByGenderOrCategory(currentPage,ganreName,ganreId,categoryForHttpReq,search)">
+                <</button> 
+    </div> 
+                <div *ngFor="let page of pagesArray; let i = index">
+                    <button class="pagesButtons" mat-button [disabled]="page == currentPage"
+                        (click)="returnPage.loadSpecificPages.loadSpecificPageForListByGenderOrCategory(page,ganreName,ganreId,categoryForHttpReq,search)">{{page}}</button>
+                </div>
+
+    <div fxFlex.xs="100%" fxFlex.sm="100%" fxLayoutAlign="center">
+        
+        <button mat-raised-button [disabled]="totalPages == currentPage || currentPage == pagesArray[9]"
+            (click)="returnPage.loadNextPage.loadNextPageForListByGenderOrCategory(currentPage,ganreName,ganreId,categoryForHttpReq,search)">></button>
+        
+            <button mat-raised-button [disabled]="totalPages == currentPage || totalPages < pagesArray[0]+10"
+            (click)="get10NextPages()">>></button>
+    </div>
+
+</div>

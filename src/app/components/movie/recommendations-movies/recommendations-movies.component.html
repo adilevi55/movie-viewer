@@ -1,0 +1,11 @@
+<ng-template [ngIf]="movieRecommendations.length > 0" 
+    [ngIfElse]="noRecommendationsFound">
+
+    <mv-movie-list-layout [movies]=movieRecommendations [notNeedPager]="true">
+    </mv-movie-list-layout>
+
+</ng-template>
+
+<ng-template #noRecommendationsFound>
+    <h1>The {{movieName}} movie has no recommended movies</h1>
+</ng-template>

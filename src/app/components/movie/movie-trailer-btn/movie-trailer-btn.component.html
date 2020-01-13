@@ -1,0 +1,12 @@
+<button *ngIf="movieHaveNoTrailer; else noTrailerFound"
+ mat-raised-button color="warn" (click)="openDialog()">
+    <i class="material-icons">play_circle_filled</i>
+    Watch Trailer
+</button>
+
+<ng-template #noTrailerFound>
+    <button class="noTrailerFoundButton" disabled mat-stroked-button color="warn">
+        <i class="material-icons">play_circle_filled</i>
+        {{title}} has no trailer
+    </button>
+</ng-template>

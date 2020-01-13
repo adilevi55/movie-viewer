@@ -1,0 +1,8 @@
+<ng-template [ngIf]="category.length > 0">
+    <div *ngFor="let c of category">
+        <button mat-raised-button color="warn"
+        routerLink="/movie-list/genre/{{c.name}}/{{c.id}}/1">
+            {{c.name}}
+        </button>
+    </div>
+</ng-template>

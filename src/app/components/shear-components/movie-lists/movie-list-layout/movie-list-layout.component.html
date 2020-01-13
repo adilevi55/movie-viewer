@@ -1,0 +1,15 @@
+<h1 *ngIf="ganreName">{{ganreName}}</h1>
+<h1 *ngIf="categoryName">{{categoryName}}</h1>
+<h1 *ngIf="search">Search</h1>
+
+<mv-pager *ngIf="notNeedPager === undefined" 
+        [currentPage]="currentPage" [totalPages]="totalPages"
+         [ganreName]="ganreName" [ganreId]="ganreId"
+          [categoryForHttpReq]="categoryForHttpReq" [search]="search">
+</mv-pager>
+
+<div>
+    <mv-movie-list-card *ngFor='let m of movies' 
+    [m]="m" [notNeedVoteData]="notNeedVoteData">
+    </mv-movie-list-card>
+</div>

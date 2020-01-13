@@ -1,0 +1,11 @@
+<a mat-tab-link routerLink="/home">Home</a>
+
+<a fxShow.lt-md="false" fxShow="true" 
+    mat-tab-link *ngFor="let link of navLinks" [routerLink]="link.path"
+    routerLinkActive #rla="routerLinkActive" [active]="rla.isActive">
+    {{link.label}}
+</a>
+
+<mv-menu-nav fxShow.lt-md="true" fxShow="false" 
+            [navLinks]="navLinks" [menuName]="navbarName">
+</mv-menu-nav>
