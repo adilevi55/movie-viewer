@@ -15,7 +15,7 @@ export class AppComponent {
       { name: 'image', content: 'https://i.ibb.co/JFbBxTy/0ecd0365-7fa0-4548-94f8-b2acbbe5c877.png' },
       { name: 'description', content: `description" content="The site was built by Adi Levy.
        The purpose of the site is to show my programming skills.
-       The site shows information about movies` },
+       The site shows information about movies` }
       
 //       <!-- <meta name="description" content="The site was built by Adi Levy.
 // The purpose of the site is to show my programming skills.
@@ -33,7 +33,8 @@ export class AppComponent {
 // -->
 
 
-
     ]);
+    console.log(this.meta)
+
   }
 }
