@@ -9,11 +9,11 @@ import { Meta } from '@angular/platform-browser';
 export class AppComponent {
   constructor(private meta: Meta) {
     this.meta.addTags([
-      { name: 'title', content: 'Movies Viewer' },
-      { name: 'type', content: 'website' },
-      { name: 'url', content: 'https://adilevi55.github.io/movie-viewer' },
-      { name: 'image', content: 'https://i.ibb.co/JFbBxTy/0ecd0365-7fa0-4548-94f8-b2acbbe5c877.png' },
-      { name: 'description', content: `description" content="The site was built by Adi Levy.
+      { property: 'og:title', content: 'Movies Viewer' },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:url', content: 'https://adilevi55.github.io/movie-viewer' },
+      { property: 'og:image', content: 'https://i.ibb.co/JFbBxTy/0ecd0365-7fa0-4548-94f8-b2acbbe5c877.png' },
+      { property: 'og:description', content: `description" content="The site was built by Adi Levy.
        The purpose of the site is to show my programming skills.
        The site shows information about movies` }
       
@@ -34,7 +34,7 @@ export class AppComponent {
 
 
     ]);
-    console.log(this.meta)
+    console.log(this.meta.getTags("property='og:description'")) 
 
   }
 }
